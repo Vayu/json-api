@@ -9,6 +9,8 @@
 
 ## <a href="#status" id="status" class="headerlink"></a> Status
 
+  This page represents the stripped-down version of JSON API.
+
 {% comment %}
   The first paragraph in each case, below, aims to explain what content
   the page holds and how that may (or may not) change over time.
@@ -17,6 +19,7 @@
   included for it to be rendered correctly as markdown.
 {% endcomment %}
 
+{% comment %}
 {% if is_latest_version_page %}
   This page represents the latest published version of JSON API, which is
   currently version {{ site.latest_version }}. New versions of JSON API **will
@@ -67,3 +70,4 @@
   Keep in mind, though, that all new versions of JSON API **must be backwards
   compatible** using a _never remove, only add_ strategy.
 {% endif %}
+{% endcomment %}
