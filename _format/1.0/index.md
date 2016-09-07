@@ -129,7 +129,7 @@ For example, the following primary data is a single resource object:
 }
 ```
 
-##### ~~resource identifier object example~~
+##### ~~cut resource identifier object example~~
 
 The following primary data is a single [resource identifier object] that
 references the same resource:
@@ -142,6 +142,8 @@ references the same resource:
   }
 }
 ```
+
+##### cut end
 
 A logical collection of resources **MUST** be represented as an array, even if
 it only contains one item or is empty.
@@ -158,14 +160,14 @@ A resource object ~~**MUST**~~ **MAY** contain ~~at least~~ the following top-le
 Exception: The `id` member is not required when the resource object originates at
 the client and represents a new resource to be created on the server.
 
-In addition, a resource object **MAY** contain any of these top-level members:
+##### ~~In addition, a resource object **MAY** contain any of these top-level members:~~
 
-* ~~`attributes`: an [attributes object][attributes] representing some of the resource's data.~~
-* ~~`relationships`: a [relationships object][relationships] describing relationships between
- the resource and other JSON API resources.~~
-* ~~`links`: a [links object][links] containing links related to the resource.~~
-* ~~`meta`: a [meta object][meta] containing non-standard meta-information about a
-  resource that can not be represented as an attribute or relationship.~~
+* `attributes`: an [attributes object][attributes] representing some of the resource's data.
+* `relationships`: a [relationships object][relationships] describing relationships between
+ the resource and other JSON API resources.
+* `links`: a [links object][links] containing links related to the resource.
+* `meta`: a [meta object][meta] containing non-standard meta-information about a
+  resource that can not be represented as an attribute or relationship.
 
 Here's how an article (i.e. a resource of type "articles") might appear in a document:
 
