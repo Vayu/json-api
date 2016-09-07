@@ -140,17 +140,7 @@ function markStrikethrough() {
   var head = null;
   var stuff = [];
   $('section').children().each(function() {
-    if (head === null) {
-      if ($(this).find('del').length > 0) {
-        if ($(this).prop('tagName') == 'P') {
-        } else {
-          head = $(this);
-          $('#document-outline').find('a').filter(function(index) {
-            return $.trim($(this).text()) == $.trim(head.text());
-          }).css('text-decoration', 'line-through').css('background-color', '#FF88DD');
-        }
-      }
-    } else {
+    if (head !== null) {
       if ($(this).prop('tagName') == head.prop('tagName')) {
         stuff = $(stuff).map(function () { return this.toArray(); });
         (function(head, stuff) {
@@ -172,6 +162,17 @@ function markStrikethrough() {
         stuff = [];
       } else {
         stuff.push($(this));
+      }
+    }
+    if (head === null) {
+      if ($(this).find('del').length > 0) {
+        if ($(this).prop('tagName') == 'P') {
+        } else {
+          head = $(this);
+          $('#document-outline').find('a').filter(function(index) {
+            return $.trim($(this).text()) == $.trim(head.text());
+          }).css('text-decoration', 'line-through').css('background-color', '#FF88DD');
+        }
       }
     }
   });
