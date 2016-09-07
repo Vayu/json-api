@@ -1293,7 +1293,7 @@ A server **MUST** prepare responses, and a client **MUST** interpret
 responses, in accordance with
 [`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
 
-### <a href="#crud-updating" id="crud-updating" class="headerlink"></a> Updating Resources
+### <a href="#crud-updating" id="crud-updating" class="headerlink"></a> ~~Updating Resources~~
 
 A resource can be updated by sending a `PATCH` request to the URL that
 represents the resource.
