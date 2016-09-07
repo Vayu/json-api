@@ -146,7 +146,7 @@ function markStrikethrough() {
         stuff = $(stuff).map(function () { return this.toArray(); });
         (function(head, stuff) {
           head.css('background-color', '#FFDDDD')
-              .css('border', '3px double red')
+              .css('border-bottom', '3px double red')
               .css('cursor', 'pointer');
           stuff.css('background-color', '#FFDDDD');
           stuff.css('display', 'none');
