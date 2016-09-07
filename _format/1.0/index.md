@@ -681,7 +681,7 @@ A server **MUST** respond to a successful request to fetch a resource
 collection with an array of [resource objects] or an empty array (`[]`) as
 the response document's primary data.
 
-For example, a `GET` request to a collection of articles could return:
+##### ~~For example, a `GET` request to a collection of articles could return:~~
 
 ```http
 HTTP/1.1 200 OK
@@ -707,7 +707,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-A similar response representing an empty collection would be:
+##### ~~A similar response representing an empty collection would be:~~
 
 ```http
 HTTP/1.1 200 OK
@@ -721,6 +721,8 @@ Content-Type: application/vnd.api+json
 }
 ```
 
+##### ~~cut end~~
+
 A server **MUST** respond to a successful request to fetch an individual
 resource with a [resource object][resource objects] or `null` provided as
 the response document's primary data.
@@ -733,7 +735,7 @@ This request would respond with `null` when the relationship is empty (such that
 the link is corresponding to no resources) but with the single related resource's
 [resource object][resource objects] otherwise.
 
-For example, a `GET` request to an individual article could return:
+##### ~~For example, a `GET` request to an individual article could return:~~
 
 ```http
 HTTP/1.1 200 OK
