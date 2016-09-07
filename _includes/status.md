@@ -42,7 +42,7 @@
 {% else %}
   This page presents an archived copy of JSON API version {{ version }}. None
   of the normative text on this page will change. While {{ version }} is no
-  longer the [latest version](/format/) of JSON API, **new versions will remain
+  longer the [latest version](/json-api/format/) of JSON API, **new versions will remain
   compatible with this one**, as JSON API uses a _never remove, only add_ strategy.
 
 {% endif %}

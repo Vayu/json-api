@@ -63,24 +63,22 @@ excerpt_separator: ""
 
 navigation:
 - title: JSON API
-  url: /
+  url: /json-api/
 - title: Specification
-  url: /format/
+  url: /json-api/format/
 - title: Extensions
-  url: /extensions/
+  url: /json-api/extensions/
 - title: Recommendations
-  url: /recommendations/
+  url: /json-api/recommendations/
 - title: Examples
-  url: /examples/
+  url: /json-api/examples/
 - title: Implementations
-  url: /implementations/
+  url: /json-api/implementations/
 - title: FAQ
-  url: /faq/
+  url: /json-api/faq/
 - title: About
-  url: /about/
+  url: /json-api/about/
 
 quicklinks:
 - title: View the specification
-  url: /format/
-- title: Contribute on GitHub
-  url: https://github.com/json-api/json-api
+  url: /json-api/format/

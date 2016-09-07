@@ -112,7 +112,7 @@ type designation is [`application/vnd.api+json`](http://www.iana.org/assignments
 ## <a href="#format-documentation" id="format-documentation" class="headerlink"></a> Format documentation
 
 To get started with JSON API, check out [documentation for the base
-specification](/format).
+specification](/json-api/format).
 
 ## <a href="#extensions" id="extensions" class="headerlink"></a> Extensions
 

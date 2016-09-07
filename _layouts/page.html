@@ -63,7 +63,7 @@
             <li {% if url == link.url %}class="active"{% endif %}><a href="{{link.url}}" title="{{link.title}}">{{link.title}}</a></li>
           {% endfor %}
           <li class="version">
-            <a href="/format/#status" class="pill">v{{ site.latest_version }} <span class="stable">Stable</span></a>
+            <a href="/json-api/format/#status" class="pill">v{{ site.latest_version }} <span class="stable">Stable</span></a>
           </li>
         </ul>
       </div>
@@ -92,13 +92,13 @@
               <div id="version-picker-wrapper" class="sidebar-top">
                 <label for="version-picker">Version: </label>
                 <select class="version-picker" id="version-picker">
-                  <option value="/format/"
+                  <option value="/json-api/format/"
                     {% if page.is_latest_version %}selected{% endif %}
                   >
                     Latest Version (v{{ site.latest_version }})
                   </option>
                   <option
-                    value="/format/upcoming/"
+                    value="/json-api/format/upcoming/"
                     {% if page.is_upcoming_version %}selected{% endif %}
                   >
                     Upcoming Version (v{{ site.latest_version|plus:0.1 }})
@@ -106,7 +106,7 @@
                   <optgroup label="Old Versions/Permalinks">
                     {% for spec_draft in site.format|sort:'version' %}
                       {% if spec_draft.version and spec_draft.path contains 'index' %}
-                        <option value="/format/{{spec_draft.version}}"
+                        <option value="/json-api/format/{{spec_draft.version}}"
                           {% if page.version == spec_draft.version %}selected{% endif%}
                         >
                           v{{spec_draft.version}}
