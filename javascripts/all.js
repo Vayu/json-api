@@ -145,17 +145,18 @@ function markStrikethrough() {
           $(this).prop('tagName') <= head.prop('tagName')) {
         stuff = $(stuff).map(function () { return this.toArray(); });
         (function(head, stuff) {
-          head.css('background-color', '#FFDDDD');
-          head.css('border-bottom', '3px double red');
+          head.css('background-color', '#FFDDDD')
+              .css('border', '3px double red')
+              .css('cursor', 'pointer');
           stuff.css('background-color', '#FFDDDD');
           stuff.css('display', 'none');
           head.click(function() {
             console.log(head.css('background-color'));
             if (head.css('background-color') == 'rgb(255, 221, 221)') {
-//               head.css('background-color', '#DDFFDD');
+              head.css('background-color', '#FFDADA');
               stuff.css('display', 'block');
             } else {
-//               head.css('background-color', '#FFDDDD');
+              head.css('background-color', '#FFDDDD');
               stuff.css('display', 'none');
             }
           });
