@@ -1152,7 +1152,7 @@ A resource can be created by sending a `POST` request to a URL that represents
 a collection of resources. The request **MUST** include a single [resource object][resource objects]
 as primary data. The [resource object][resource objects] **MUST** contain at least a `type` member.
 
-For instance, a new photo might be created with the following request:
+##### ~~For instance, a new photo might be created with the following request:~~
 
 ```http
 POST /photos HTTP/1.1
@@ -1175,12 +1175,12 @@ Accept: application/vnd.api+json
 }
 ```
 
-If a relationship is provided in the `relationships` member of the
+~~If a relationship is provided in the `relationships` member of the
 [resource object][resource objects], its value **MUST** be a relationship object with a `data`
 member. The value of this key represents the linkage the new resource is to
-have.
+have.~~
 
-#### <a href="#crud-creating-client-ids" id="crud-creating-client-ids" class="headerlink"></a> Client-Generated IDs
+#### <a href="#crud-creating-client-ids" id="crud-creating-client-ids" class="headerlink"></a> ~~Client-Generated IDs~~
 
 A server **MAY** accept a client-generated ID along with a request to create
 a resource. An ID **MUST** be specified with an `id` key, the value of
@@ -1220,19 +1220,21 @@ to create a resource with a client-generated ID.
 
 ##### <a href="#crud-creating-responses-201" id="crud-creating-responses-201" class="headerlink"></a> 201 Created
 
-If a `POST` request did not include a [Client-Generated
-ID](#crud-creating-client-ids) and the requested resource has been created
+If ~~a `POST` request did not include a [Client-Generated
+ID](#crud-creating-client-ids) and~~ the requested resource has been created
 successfully, the server **MUST** return a `201 Created` status code.
 
 The response **SHOULD** include a `Location` header identifying the location
 of the newly created resource.
 
-The response **MUST** also include a document that contains the primary
-resource created.
+~~The response **MUST** also include a document that contains the primary
+resource created.~~
 
 If the [resource object][resource objects] returned by the response contains a `self` key in its
 `links` member and a `Location` header is provided, the value of the `self`
 member **MUST** match the value of the `Location` header.
+
+##### ~~cut example~~
 
 ```http
 HTTP/1.1 201 Created
@@ -1260,7 +1262,7 @@ If a request to create a resource has been accepted for processing, but the
 processing has not been completed by the time the server responds, the
 server **MUST** return a `202 Accepted` status code.
 
-##### <a href="#crud-creating-responses-204" id="crud-creating-responses-204" class="headerlink"></a> 204 No Content
+##### <a href="#crud-creating-responses-204" id="crud-creating-responses-204" class="headerlink"></a> ~~204 No Content~~
 
 If a `POST` request *did* include a [Client-Generated
 ID](#crud-creating-client-ids) and the requested resource has been created
@@ -1277,7 +1279,7 @@ had returned it back in a `201` response.
 A server **MAY** return `403 Forbidden` in response to an unsupported request
 to create a resource.
 
-##### <a href="#crud-creating-responses-409" id="crud-creating-responses-409" class="headerlink"></a> 409 Conflict
+##### <a href="#crud-creating-responses-409" id="crud-creating-responses-409" class="headerlink"></a> ~~409 Conflict~~
 
 A server **MUST** return `409 Conflict` when processing a `POST` request to
 create a resource with a client-generated ID that already exists.
