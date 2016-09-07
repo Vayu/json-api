@@ -354,7 +354,7 @@ identifies the resource represented by the resource object.
 A server **MUST** respond to a `GET` request to the specified URL with a
 response that includes the resource as the primary data.
 
-### <a href="#document-resource-identifier-objects" id="document-resource-identifier-objects" class="headerlink"></a> Resource Identifier Objects
+### <a href="#document-resource-identifier-objects" id="document-resource-identifier-objects" class="headerlink"></a> ~~Resource Identifier Objects~~
 
 A "resource identifier object" is an object that identifies an individual
 resource.
@@ -364,7 +364,7 @@ A "resource identifier object" **MUST** contain `type` and `id` members.
 A "resource identifier object" **MAY** also include a `meta` member, whose value is a [meta] object that
 contains non-standard meta-information.
 
-### <a href="#document-compound-documents" id="document-compound-documents" class="headerlink"></a> Compound Documents
+### <a href="#document-compound-documents" id="document-compound-documents" class="headerlink"></a> ~~Compound Documents~~
 
 To reduce the number of HTTP requests, servers **MAY** allow responses that
 include related resources along with the requested primary resources. Such
@@ -541,7 +541,7 @@ objects in the future. It is also possible that the allowed values of
 additional members will be expanded (e.g. a `collection` link may support an
 array of values, whereas a `self` link does not).
 
-### <a href="#document-jsonapi-object" id="document-jsonapi-object" class="headerlink"></a> JSON API Object
+### <a href="#document-jsonapi-object" id="document-jsonapi-object" class="headerlink"></a> ~~JSON API Object~~
 
 A JSON API document **MAY** include information about its implementation
 under a top level `jsonapi` member. If present, the value of the `jsonapi`
@@ -1483,7 +1483,7 @@ A server **MUST** prepare responses, and a client **MUST** interpret
 responses, in accordance with
 [`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
 
-### <a href="#crud-updating-relationships" id="crud-updating-relationships" class="headerlink"></a> Updating Relationships
+### <a href="#crud-updating-relationships" id="crud-updating-relationships" class="headerlink"></a> ~~Updating Relationships~~
 
 Although relationships can be modified along with resources (as described
 above), JSON API also supports updating of relationships independently at
