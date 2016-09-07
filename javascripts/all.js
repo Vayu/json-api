@@ -167,15 +167,15 @@ function markStrikethrough() {
     }
     if (head === null) {
       if ($(this).find('del').length > 0) {
-        if ($(this).prop('tagName') == 'P') {
-          $(this).find('del').css('background-color', '#FFDDDD');
-        } else {
+        if ($(this).prop('tagName')[0] == 'H') {
           head = $(this);
           var outline = $('#document-outline').find('a').filter(function(index) {
             return $.trim($(this).text()) == $.trim(head.text());
           });
           outline.css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
           outline.parent().children().css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
+        } else {
+          $(this).find('del').css('background-color', '#FFDDDD');
         }
       }
     }
