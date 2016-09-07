@@ -148,7 +148,7 @@ function markStrikethrough() {
           head.css('background-color', '#FFDDDD')
               .css('border-bottom', '3px double red')
               .css('cursor', 'pointer');
-          stuff.css('background-color', '#FFDDDD');
+          stuff.css('background-color', '#FFDDFF');
           stuff.css('display', 'none');
           head.click(function() {
             console.log(head.css('background-color'));
