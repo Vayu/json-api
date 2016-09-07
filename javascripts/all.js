@@ -175,7 +175,7 @@ function markStrikethrough() {
           outline.css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
           outline.parent().children().css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
         } else {
-          $(this).find('del').css('background-color', '#FFDDDD');
+          $(this).find('del').css('background-color', '#FFF0F0');
         }
       }
     }
