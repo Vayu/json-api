@@ -145,7 +145,7 @@ function markStrikethrough() {
         stuff = $(stuff).map(function () { return this.toArray(); });
         (function(head, stuff) {
           head.css('background-color', '#FFDDDD');
-          stuff.css('background-color', '#CCCCCC');
+          stuff.css('background-color', '#DDFFDD');
           stuff.css('display', 'none');
           head.click(function() {
             console.log(head.css('background-color'));
@@ -173,7 +173,7 @@ function markStrikethrough() {
             return $.trim($(this).text()) == $.trim(head.text());
           });
           outline.css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
-          outline.children().css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
+          outline.parent().children().css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
         }
       }
     }
