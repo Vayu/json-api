@@ -593,7 +593,7 @@ first or last character:
 - U+005F LOW LINE, "_"
 - U+0020 SPACE, " " _(not recommended, not URL safe)_
 
-#### <a href="#document-member-names-reserved-characters" id="document-member-names-reserved-characters" class="headerlink"></a> Reserved Characters
+#### <a href="#document-member-names-reserved-characters" id="document-member-names-reserved-characters" class="headerlink"></a> ~~Reserved Characters~~
 
 The following characters **MUST NOT** be used in member names:
 
@@ -642,8 +642,8 @@ Responses can be further refined with the optional features described below.
 A server **MUST** support fetching resource data for every URL provided as:
 
 * a `self` link as part of the top-level links object
-* a `self` link as part of a resource-level links object
-* a `related` link as part of a relationship-level links object
+* ~~a `self` link as part of a resource-level links object~~
+* ~~a `related` link as part of a relationship-level links object~~
 
 For example, the following request fetches a collection of articles:
 
@@ -787,7 +787,7 @@ A server **MUST** prepare responses, and a client **MUST** interpret
 responses, in accordance with
 [`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
 
-### <a href="#fetching-relationships" id="fetching-relationships" class="headerlink"></a> Fetching Relationships
+### <a href="#fetching-relationships" id="fetching-relationships" class="headerlink"></a> ~~Fetching Relationships~~
 
 A server **MUST** support fetching relationship data for every relationship URL
 provided as a `self` link as part of a relationship's `links` object.
@@ -911,7 +911,7 @@ A server **MUST** prepare responses, and a client **MUST** interpret
 responses, in accordance with
 [`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
 
-### <a href="#fetching-includes" id="fetching-includes" class="headerlink"></a> Inclusion of Related Resources
+### <a href="#fetching-includes" id="fetching-includes" class="headerlink"></a> ~~Inclusion of Related Resources~~
 
 An endpoint **MAY** return resources related to the primary data by default.
 
@@ -989,7 +989,7 @@ data, regardless of the request type. For instance, a server could support
 the inclusion of related resources along with a `POST` request to create a
 resource or relationship.
 
-### <a href="#fetching-sparse-fieldsets" id="fetching-sparse-fieldsets" class="headerlink"></a> Sparse Fieldsets
+### <a href="#fetching-sparse-fieldsets" id="fetching-sparse-fieldsets" class="headerlink"></a> ~~Sparse Fieldsets~~
 
 A client **MAY** request that an endpoint return only specific [fields] in the
 response on a per-type basis by including a `fields[TYPE]` parameter.
