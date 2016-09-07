@@ -142,7 +142,7 @@ function markStrikethrough() {
   $('section').children().each(function() {
     if (head !== null) {
       if ($(this).prop('tagName')[0] == head.prop('tagName')[0] &&
-          $(this).prop('tagName') >= head.prop('tagName')) {
+          $(this).prop('tagName') <= head.prop('tagName')) {
         stuff = $(stuff).map(function () { return this.toArray(); });
         (function(head, stuff) {
           head.css('background-color', '#FFDDDD');
