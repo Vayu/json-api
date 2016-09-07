@@ -146,15 +146,16 @@ function markStrikethrough() {
         stuff = $(stuff).map(function () { return this.toArray(); });
         (function(head, stuff) {
           head.css('background-color', '#FFDDDD');
-          stuff.css('background-color', '#DDFFDD');
+          head.css('border-bottom', '3px double red');
+          stuff.css('background-color', '#FFDDDD');
           stuff.css('display', 'none');
           head.click(function() {
             console.log(head.css('background-color'));
             if (head.css('background-color') == 'rgb(255, 221, 221)') {
-              head.css('background-color', '#DDFFDD');
+//               head.css('background-color', '#DDFFDD');
               stuff.css('display', 'block');
             } else {
-              head.css('background-color', '#FFDDDD');
+//               head.css('background-color', '#FFDDDD');
               stuff.css('display', 'none');
             }
           });
@@ -175,7 +176,7 @@ function markStrikethrough() {
           outline.css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
           outline.parent().children().css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
         } else {
-          $(this).find('del').css('background-color', '#FFF0F0');
+          $(this).find('del').css('background-color', '#FFDDDD');
         }
       }
     }
