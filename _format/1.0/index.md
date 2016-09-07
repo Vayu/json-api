@@ -106,10 +106,10 @@ of resources targeted by a request.
 
 Primary data **MUST** be either:
 
-* a single [resource object][resource objects], a single [resource identifier object], or `null`,
+* a single [resource object][resource objects], ~a single [resource identifier object],~ or `null`,
   for requests that target single resources
-* an array of [resource objects], an array of
-  [resource identifier objects][resource identifier object], or
+* an array of [resource objects], ~an array of
+  [resource identifier objects][resource identifier object],~ or
   an empty array (`[]`), for requests that target resource collections
 
 For example, the following primary data is a single resource object:
@@ -128,6 +128,8 @@ For example, the following primary data is a single resource object:
   }
 }
 ```
+
+##### ~~resource identifier object example~~
 
 The following primary data is a single [resource identifier object] that
 references the same resource:
