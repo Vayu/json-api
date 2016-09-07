@@ -54,21 +54,21 @@ and versioning.
 
 ## <a href="#document-structure" id="document-structure" class="headerlink"></a> Document Structure
 
-This section describes the structure of a JSON API document, which is identified
-by the media type [`application/vnd.api+json`](http://www.iana.org/assignments/media-types/application/vnd.api+json).
+~~This section describes the structure of a JSON API document, which is identified
+by the media type [`application/vnd.api+json`](http://www.iana.org/assignments/media-types/application/vnd.api+json).~~
 JSON API documents are defined in JavaScript Object Notation (JSON)
 [[RFC7159](http://tools.ietf.org/html/rfc7159)].
 
-Although the same media type is used for both request and response documents,
+~~Although the same media type is used for both request and response documents,
 certain aspects are only applicable to one or the other. These differences are
-called out below.
+called out below.~~
 
-Unless otherwise noted, objects defined by this specification **MUST NOT**
+~~Unless otherwise noted, objects defined by this specification **MUST NOT**
 contain any additional members. Client and server implementations **MUST**
-ignore members not recognized by this specification.
+ignore members not recognized by this specification.~~
 
-> Note: These conditions allow this specification to evolve through additive
-changes.
+~~Note: These conditions allow this specification to evolve through additive
+changes.~~
 
 ### <a href="#document-top-level" id="document-top-level" class="headerlink"></a> Top Level
 
@@ -86,19 +86,19 @@ The members `data` and `errors` **MUST NOT** coexist in the same document.
 
 A document **MAY** contain any of these top-level members:
 
-* `jsonapi`: an object describing the server's implementation
+* ~~`jsonapi`: an object describing the server's implementation~~
 * `links`: a [links object][links] related to the primary data.
-* `included`: an array of [resource objects] that are related to the primary
-  data and/or each other ("included resources").
+* ~~`included`: an array of [resource objects] that are related to the primary
+  data and/or each other ("included resources").~~
 
-If a document does not contain a top-level `data` key, the `included` member
-**MUST NOT** be present either.
+~~If a document does not contain a top-level `data` key, the `included` member
+**MUST NOT** be present either.~~
 
 The top-level [links object][links] **MAY** contain the following members:
 
 * `self`: the [link][links] that generated the current response document.
-* `related`: a [related resource link] when the primary data represents a
-  resource relationship.
+* ~~`related`: a [related resource link] when the primary data represents a
+  resource relationship.~~
 * [pagination] links for the primary data.
 
 The document's "primary data" is a representation of the resource or collection
@@ -148,7 +148,7 @@ it only contains one item or is empty.
 
 "Resource objects" appear in a JSON API document to represent resources.
 
-A resource object **MUST** contain at least the following top-level members:
+A resource object ~~**MUST**~~ **MAY** contain ~~at least~~ the following top-level members:
 
 * `id`
 * `type`
@@ -158,12 +158,12 @@ the client and represents a new resource to be created on the server.
 
 In addition, a resource object **MAY** contain any of these top-level members:
 
-* `attributes`: an [attributes object][attributes] representing some of the resource's data.
-* `relationships`: a [relationships object][relationships] describing relationships between
- the resource and other JSON API resources.
-* `links`: a [links object][links] containing links related to the resource.
-* `meta`: a [meta object][meta] containing non-standard meta-information about a
-  resource that can not be represented as an attribute or relationship.
+* ~~`attributes`: an [attributes object][attributes] representing some of the resource's data.~~
+* ~~`relationships`: a [relationships object][relationships] describing relationships between
+ the resource and other JSON API resources.~~
+* ~~`links`: a [links object][links] containing links related to the resource.~~
+* ~~`meta`: a [meta object][meta] containing non-standard meta-information about a
+  resource that can not be represented as an attribute or relationship.~~
 
 Here's how an article (i.e. a resource of type "articles") might appear in a document:
 
@@ -190,7 +190,7 @@ Here's how an article (i.e. a resource of type "articles") might appear in a doc
 
 #### <a href="#document-resource-object-identification" id="document-resource-object-identification" class="headerlink"></a> Identification
 
-Every [resource object][resource objects] **MUST** contain an `id` member and a `type` member.
+Every [resource object][resource objects] ~~**MUST**~~ **MAY** contain an `id` member and a `type` member.
 The values of the `id` and `type` members **MUST** be strings.
 
 Within a given API, each resource object's `type` and `id` pair **MUST**
@@ -207,7 +207,7 @@ The values of `type` members **MUST** adhere to the same constraints as
 can be either plural or singular. However, the same value should be used
 consistently throughout an implementation.
 
-#### <a href="#document-resource-object-fields" id="document-resource-object-fields" class="headerlink"></a> Fields
+#### <a href="#document-resource-object-fields" id="document-resource-object-fields" class="headerlink"></a> ~~Fields~~
 
 A resource object's [attributes] and its [relationships] are collectively called
 its "[fields]".
@@ -217,7 +217,7 @@ other and with `type` and `id`. In other words, a resource can not have an
 attribute and relationship with the same name, nor can it have an attribute
 or relationship named `type` or `id`.
 
-#### <a href="#document-resource-object-attributes" id="document-resource-object-attributes" class="headerlink"></a> Attributes
+#### <a href="#document-resource-object-attributes" id="document-resource-object-attributes" class="headerlink"></a> ~~Attributes~~
 
 The value of the `attributes` key **MUST** be an object (an "attributes
 object"). Members of the attributes object ("attributes") represent information
@@ -236,7 +236,7 @@ alongside other information to be represented in a resource object, these keys
 
 > Note: See [fields] and [member names] for more restrictions on this container.
 
-#### <a href="#document-resource-object-relationships" id="document-resource-object-relationships" class="headerlink"></a> Relationships
+#### <a href="#document-resource-object-relationships" id="document-resource-object-relationships" class="headerlink"></a> ~~Relationships~~
 
 The value of the `relationships` key **MUST** be an object (a "relationships
 object"). Members of the relationships object ("relationships") represent
@@ -265,7 +265,7 @@ A relationship object that represents a to-many relationship **MAY** also contai
 
 > Note: See [fields] and [member names] for more restrictions on this container.
 
-#### <a href="#document-resource-object-related-resource-links" id="document-resource-object-related-resource-links" class="headerlink"></a> Related Resource Links
+#### <a href="#document-resource-object-related-resource-links" id="document-resource-object-related-resource-links" class="headerlink"></a> ~~Related Resource Links~~
 
 A "related resource link" provides access to [resource objects][resource objects] [linked][links]
 in a [relationship][relationships]. When fetched, the related resource object(s)
@@ -280,7 +280,7 @@ relationship isn't currently associated with any target resources. Additionally,
 a related resource link **MUST NOT** change because its relationship's content
 changes.
 
-#### <a href="#document-resource-object-linkage" id="document-resource-object-linkage" class="headerlink"></a> Resource Linkage
+#### <a href="#document-resource-object-linkage" id="document-resource-object-linkage" class="headerlink"></a> ~~Resource Linkage~~
 
 Resource linkage in a [compound document] allows a client to link together all
 of the included [resource objects] without having to `GET` any URLs via [links].
@@ -328,7 +328,7 @@ The `author` relationship includes a link for the relationship itself (which
 allows the client to change the related author directly), a related resource
 link to fetch the resource objects, and linkage information.
 
-#### <a href="#document-resource-object-links" id="document-resource-object-links" class="headerlink"></a> Resource Links
+#### <a href="#document-resource-object-links" id="document-resource-object-links" class="headerlink"></a> ~~Resource Links~~
 
 The optional `links` member within each [resource object][resource objects] contains [links]
 related to the resource.
