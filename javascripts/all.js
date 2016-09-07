@@ -144,16 +144,16 @@ function markStrikethrough() {
       if ($(this).prop('tagName') == head.prop('tagName')) {
         stuff = $(stuff).map(function () { return this.toArray(); });
         (function(head, stuff) {
-          head.css('background-color', '#FF88DD');
-          stuff.css('background-color', '#DDFFEE');
+          head.css('background-color', '#FFDDDD');
+          stuff.css('background-color', '#CCCCCC');
           stuff.css('display', 'none');
           head.click(function() {
             console.log(head.css('background-color'));
-            if (head.css('background-color') == 'rgb(255, 136, 221)') {
-              head.css('background-color', '#88FFDD');
+            if (head.css('background-color') == 'rgb(255, 221, 221)') {
+              head.css('background-color', '#DDFFDD');
               stuff.css('display', 'block');
             } else {
-              head.css('background-color', '#FF88DD');
+              head.css('background-color', '#FFDDDD');
               stuff.css('display', 'none');
             }
           });
@@ -169,9 +169,11 @@ function markStrikethrough() {
         if ($(this).prop('tagName') == 'P') {
         } else {
           head = $(this);
-          $('#document-outline').find('a').filter(function(index) {
+          var outline = $('#document-outline').find('a').filter(function(index) {
             return $.trim($(this).text()) == $.trim(head.text());
-          }).css('text-decoration', 'line-through').css('background-color', '#FF88DD');
+          });
+          outline.css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
+          outline.children().css('text-decoration', 'line-through').css('background-color', '#FFDDDD');
         }
       }
     }
