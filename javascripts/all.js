@@ -141,7 +141,7 @@ function markStrikethrough() {
   var stuff = [];
   $('section').children().each(function() {
     if (head !== null) {
-      if ($(this).prop('tagName') == head.prop('tagName')) {
+      if ($(this).prop('tagName') >= head.prop('tagName')) {
         stuff = $(stuff).map(function () { return this.toArray(); });
         (function(head, stuff) {
           head.css('background-color', '#FFDDDD');
