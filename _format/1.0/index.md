@@ -1139,7 +1139,7 @@ also allow existing resources to be modified or deleted.
 A request **MUST** completely succeed or fail (in a single "transaction"). No
 partial updates are allowed.
 
-##### ~Notes~
+##### ~~Notes~~
 
 > Note: The `type` member is required in every [resource object][resource objects] throughout requests and
 responses in JSON API. There are some cases, such as when `POST`ing to an
