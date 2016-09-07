@@ -1105,6 +1105,8 @@ remain consistent with JSON API's [sorting rules](#fetching-sorting).
 The `page` query parameter is reserved for pagination. Servers and clients
 **SHOULD** use this key for pagination operations.
 
+##### ~~Notes~~
+
 > Note: JSON API is agnostic about the pagination strategy used by a server.
 Effective pagination strategies include (but are not limited to):
 page-based, offset-based, and cursor-based. The `page` query parameter can
