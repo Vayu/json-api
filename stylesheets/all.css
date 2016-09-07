@@ -179,7 +179,7 @@ p > code, li > code {
 /** Navigation */
 .site-nav {
   font-weight: 500;
-  background: #0b4e22;
+  background: #DD2244;
   border-bottom: 1px solid #cccccc; }
   .site-nav ul {
     -webkit-justify-content: space-between;
