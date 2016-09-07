@@ -167,6 +167,7 @@ function markStrikethrough() {
     if (head === null) {
       if ($(this).find('del').length > 0) {
         if ($(this).prop('tagName') == 'P') {
+          $(this).find('del').css('background-color', '#FFDDDD');
         } else {
           head = $(this);
           var outline = $('#document-outline').find('a').filter(function(index) {
