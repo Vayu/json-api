@@ -59,16 +59,16 @@ by the media type [`application/vnd.api+json`](http://www.iana.org/assignments/m
 JSON API documents are defined in JavaScript Object Notation (JSON)
 [[RFC7159](http://tools.ietf.org/html/rfc7159)].
 
-~~Although the same media type is used for both request and response documents,
+##### ~~Although the same media type is used for both request and response documents,~~
 certain aspects are only applicable to one or the other. These differences are
-called out below.~~
+called out below.
 
-~~Unless otherwise noted, objects defined by this specification **MUST NOT**
+Unless otherwise noted, objects defined by this specification **MUST NOT**
 contain any additional members. Client and server implementations **MUST**
-ignore members not recognized by this specification.~~
+ignore members not recognized by this specification.
 
-~~Note: These conditions allow this specification to evolve through additive
-changes.~~
+Note: These conditions allow this specification to evolve through additive
+changes.
 
 ### <a href="#document-top-level" id="document-top-level" class="headerlink"></a> Top Level
 
@@ -106,13 +106,13 @@ of resources targeted by a request.
 
 Primary data **MUST** be either:
 
-* a single [resource object][resource objects], ~a single [resource identifier object],~ or `null`,
+* a single [resource object][resource objects], ~~a single [resource identifier object],~~ or `null`,
   for requests that target single resources
-* an array of [resource objects], ~an array of
-  [resource identifier objects][resource identifier object],~ or
+* an array of [resource objects], ~~an array of
+  [resource identifier objects][resource identifier object],~~ or
   an empty array (`[]`), for requests that target resource collections
 
-For example, the following primary data is a single resource object:
+##### ~~For example, the following primary data is a single resource object:~~
 
 ```json
 {
@@ -129,9 +129,8 @@ For example, the following primary data is a single resource object:
 }
 ```
 
-##### ~~cut resource identifier object example~~
-
-The following primary data is a single [resource identifier object] that
+##### ~~The following primary data is a single [resource identifier object]~~
+that
 references the same resource:
 
 ```json
@@ -143,9 +142,7 @@ references the same resource:
 }
 ```
 
-##### cut end
-
-A logical collection of resources **MUST** be represented as an array, even if
+##### A logical collection of resources **MUST** be represented as an array, even if
 it only contains one item or is empty.
 
 ### <a href="#document-resource-objects" id="document-resource-objects" class="headerlink"></a> Resource Objects
@@ -1026,6 +1023,8 @@ a resource.
 A server **MAY** choose to support requests to sort resource collections
 according to one or more criteria ("sort fields").
 
+##### ~~Notes~~
+
 > Note: Although recommended, sort fields do not necessarily need to
 correspond to resource attribute and association names.
 
@@ -1035,8 +1034,8 @@ example, a sort field of `author.name` could be used to request that the
 primary data be sorted based upon the `name` attribute of the `author`
 relationship.
 
-An endpoint **MAY** support requests to sort the primary data with a `sort`
-query parameter. The value for `sort` **MUST** represent sort fields.
+##### An endpoint **MAY** support requests to sort the primary data with a `sort`
+query parameter. The value for `sort` ~~**MUST**~~**MAY** represent sort fields.
 
 ```http
 GET /people?sort=age HTTP/1.1
@@ -1137,6 +1136,8 @@ also allow existing resources to be modified or deleted.
 
 A request **MUST** completely succeed or fail (in a single "transaction"). No
 partial updates are allowed.
+
+##### ~Notes~
 
 > Note: The `type` member is required in every [resource object][resource objects] throughout requests and
 responses in JSON API. There are some cases, such as when `POST`ing to an
@@ -1744,7 +1745,8 @@ least one non a-z character (U+0061 to U+007A). It is **RECOMMENDED** that a
 U+002D HYPHEN-MINUS, "-", U+005F LOW LINE, "_", or capital letter is used
 (e.g. camelCasing).
 
-If a server encounters a query parameter that does not follow the naming
+##### ~~If a server encounters a query parameter that does not follow~~
+the naming
 conventions above, and the server does not know how to process it as a query
 parameter from this specification, it **MUST** return `400 Bad Request`.
 
