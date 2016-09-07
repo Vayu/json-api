@@ -63,7 +63,7 @@
             <li {% if url == link.url %}class="active"{% endif %}><a href="{{link.url}}" title="{{link.title}}">{{link.title}}</a></li>
           {% endfor %}
           <li class="version">
-            <a href="/json-api/format/#status" class="pill">v{{ site.latest_version }} <span class="stable">Stable</span></a>
+            <a href="/json-api/format/#status" class="pill">v{{ site.latest_version }} <span class="unofficial unstable"></span></a>
           </li>
         </ul>
       </div>
