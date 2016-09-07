@@ -7,13 +7,13 @@ version: 1.0
 JSON API is a specification for how a client should request that resources be
 fetched or modified, and how a server should respond to those requests.
 
-JSON API is designed to minimize both the number of requests and the amount of
+~~JSON API is designed to minimize both the number of requests and the amount of
 data transmitted between clients and servers. This efficiency is achieved
-without compromising readability, flexibility, or discoverability.
+without compromising readability, flexibility, or discoverability.~~
 
-JSON API requires use of the JSON API media type
+~~JSON API requires use of the JSON API media type
 ([`application/vnd.api+json`](http://www.iana.org/assignments/media-types/application/vnd.api+json))
-for exchanging data.
+for exchanging data.~~
 
 ## <a href="#conventions" id="conventions" class="headerlink"></a> Conventions
 
@@ -24,7 +24,7 @@ interpreted as described in RFC 2119
 
 ## <a href="#content-negotiation" id="content-negotiation" class="headerlink"></a> Content Negotiation
 
-### <a href="#content-negotiation-clients" id="content-negotiation-clients" class="headerlink"></a> Client Responsibilities
+### <a href="#content-negotiation-clients" id="content-negotiation-clients" class="headerlink"></a> ~~Client Responsibilities~~
 
 Clients **MUST** send all JSON API data in request documents with the header
 `Content-Type: application/vnd.api+json` without any media type parameters.
