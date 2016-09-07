@@ -22,9 +22,9 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 interpreted as described in RFC 2119
 [[RFC2119](http://tools.ietf.org/html/rfc2119)].
 
-## <a href="#content-negotiation" id="content-negotiation" class="headerlink"></a> Content Negotiation
+## <a href="#content-negotiation" id="content-negotiation" class="headerlink"></a> ~~Content Negotiation~~
 
-### <a href="#content-negotiation-clients" id="content-negotiation-clients" class="headerlink"></a> ~~Client Responsibilities~~
+### <a href="#content-negotiation-clients" id="content-negotiation-clients" class="headerlink"></a> Client Responsibilities
 
 Clients **MUST** send all JSON API data in request documents with the header
 `Content-Type: application/vnd.api+json` without any media type parameters.
